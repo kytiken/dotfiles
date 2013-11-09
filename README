@@ -1,0 +1,2 @@
+.vimrcに以下の文を追加
+:source ~/dotfiles/vimrc
