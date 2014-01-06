@@ -13,6 +13,7 @@ NeoBundle 'Shougo/vimproc'
 
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
