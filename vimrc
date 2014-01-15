@@ -25,7 +25,14 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'ZenCoding.vim'
 NeoBundle 'skwp/vim-rspec'
 
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'sgur/vim-textobj-parameter'
+NeoBundle 'osyo-manga/vim-textobj-multiblock'
+NeoBundle 'osyo-manga/vim-textobj-multitextobj'
 
+NeoBundle 'kana/vim-operator-user'
+NeoBundle 'kana/vim-operator-replace'
+nmap s <Plug>(operator-replace)
 filetype plugin indent on
 
 if neobundle#exists_not_installed_bundles()
