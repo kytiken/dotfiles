@@ -1,3 +1,4 @@
+Vimの設定
 1) .vimrcに以下の文を追加
 :source ~/dotfiles/vimrc
 
@@ -9,3 +10,7 @@ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 4) vimを開き、下記コマンドを実行
 :NeoBundle install
+
+zshの設定
+1).zshrcに以下の文を追加
+source ~/dotfiles/zshrc
