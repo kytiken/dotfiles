@@ -1,14 +1,8 @@
 Vimの設定
-1) .vimrcに以下の文を追加
-:source ~/dotfiles/vimrc
+1) vimsetupを実行
+~/dotfiles/vimsetup
 
-2) neobundle用のディレクトリを作成
-mkdir -p ~/.vim/bundle
-
-3) neobundlのソースファイルをダウンロード
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-
-4) vimを開き、下記コマンドを実行
+2) vimを開き、下記コマンドを実行
 :NeoBundle install
 
 zshの設定
