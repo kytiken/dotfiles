@@ -47,6 +47,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'osyo-manga/unite-shimapan'
 NeoBundle 'surround.vim'
 NeoBundle 'msanders/snipmate.vim'
+NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'errormarker.vim'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'ZenCoding.vim'
@@ -59,6 +60,12 @@ NeoBundle 'osyo-manga/vim-textobj-multitextobj'
 
 NeoBundle 'kana/vim-operator-user'
 NeoBundle 'kana/vim-operator-replace'
+NeoBundle 'scrooloose/nerdtree'
+autocmd vimenter * NERDTree
+
+NeoBundle 'tpope/vim-fugitive'
+
+NeoBundle 'chase/vim-ansible-yaml'
 nmap s <Plug>(operator-replace)
 filetype plugin indent on
 
@@ -87,6 +94,7 @@ set smartcase
 set wrapscan
 set hlsearch
 
+set list
 
 :no <C-E> :Explor
 :no <C-u> :Unite
