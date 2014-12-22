@@ -19,11 +19,29 @@ call neobundle#begin(expand('/Users/kytiken/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-fugitive'
+" input support
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tomtom/tcomment_vim'
+
+" syntax check
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'errormarker.vim'
+
+NeoBundle 'thinca/vim-quickrun'
+
+" NERDTree setting
+NeoBundle 'scrooloose/nerdtree'
+autocmd vimenter * NERDTree
+
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
+
+" powerline setting
+NeoBundle 'alpaca-tc/alpaca_powertabline'
+NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+set noshowmode
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -39,33 +57,6 @@ filetype plugin indent on
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'tpope/vim-pathogen'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'osyo-manga/unite-shimapan'
-NeoBundle 'surround.vim'
-NeoBundle 'msanders/snipmate.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'errormarker.vim'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'ZenCoding.vim'
-NeoBundle 'skwp/vim-rspec'
-
-NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'sgur/vim-textobj-parameter'
-NeoBundle 'osyo-manga/vim-textobj-multiblock'
-NeoBundle 'osyo-manga/vim-textobj-multitextobj'
-
-NeoBundle 'kana/vim-operator-user'
-NeoBundle 'kana/vim-operator-replace'
-NeoBundle 'scrooloose/nerdtree'
-autocmd vimenter * NERDTree
-
-NeoBundle 'tpope/vim-fugitive'
-
-NeoBundle 'chase/vim-ansible-yaml'
 nmap s <Plug>(operator-replace)
 filetype plugin indent on
 
