@@ -36,19 +36,18 @@ NeoBundle 'scrooloose/nerdtree'
 autocmd vimenter * NERDTree
 
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'slim-template/vim-slim.git'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " powerline setting
 NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
 set noshowmode
-
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-
 " Required:
 call neobundle#end()
-
 " Required:
 filetype plugin indent on
 
@@ -87,5 +86,12 @@ set hlsearch
 
 set list
 
-:no <C-E> :Explor
-:no <C-u> :Unite
+let mapleader = "\<Space>"
+
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+nnoremap <Leader>l <C-w>l
