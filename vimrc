@@ -1,5 +1,7 @@
 syntax on
 
+set noundofile
+set backupdir=/tmp
 set nocompatible
 filetype plugin indent off
 
