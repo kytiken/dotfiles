@@ -5,13 +5,14 @@ set backupdir=/tmp
 set nocompatible
 filetype plugin indent off
 
-"NeoBundle Scripts-----------------------------
-if has('vim_starting')
-  set nocompatible               " Be iMproved
 
-  " Required:
-  set runtimepath+=/Users/kytiken/.vim/bundle/neobundle.vim/
+"NeoBundle Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
+
+" Required:
+set runtimepath^=/Users/kytiken/.vim/bundle/neobundle.vim/
 
 " Required:
 call neobundle#begin(expand('/Users/kytiken/.vim/bundle'))
@@ -20,7 +21,13 @@ call neobundle#begin(expand('/Users/kytiken/.vim/bundle'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" My Bundles here:
+" Add or remove your Bundles here:
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
+
 " input support
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'mattn/emmet-vim'
@@ -41,15 +48,21 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'slim-template/vim-slim.git'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 " powerline setting
 NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 set noshowmode
+
+
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
 " Required:
 call neobundle#end()
+
 " Required:
 filetype plugin indent on
 
@@ -60,12 +73,6 @@ NeoBundleCheck
 
 nmap s <Plug>(operator-replace)
 filetype plugin indent on
-
-if neobundle#exists_not_installed_bundles()
-  enchomsg 'Not installed bundles : '.
-    \ string(neobundle#get_not_installed_bundle_names())
-  echomsg 'Please execute ":NeoBundleInstall" command.'
-endif
 
 let g:neocomplcache_enable_at_startup = 1
 
