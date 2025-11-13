@@ -1,10 +1,3 @@
-Vimの設定
-1) vimsetupを実行
-~/dotfiles/vimsetup
+# dotfiles
 
-2) vimを開き、下記コマンドを実行
-:NeoBundle install
-
-zshの設定
-1).zshrcに以下の文を追加
-source ~/dotfiles/zshrc
+use chezmoi
