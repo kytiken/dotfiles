@@ -3,5 +3,5 @@ if status is-interactive
 end
 
 ~/.local/bin/mise activate fish | source
-set -x EDITOR hx
+set -x EDITOR /opt/homebrew/bin/hx
 starship init fish | source
