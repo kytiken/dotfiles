@@ -3,6 +3,7 @@ if status is-interactive
 end
 # abbreviations
 abbr zj zellij
+abbr cz chezmoi
 
 # setting path
 fish_add_path --path $HOME/.antigravity/antigravity/bin
