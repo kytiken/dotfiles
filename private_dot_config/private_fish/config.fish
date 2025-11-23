@@ -5,3 +5,4 @@ end
 set -x EDITOR /opt/homebrew/bin/hx
 starship init fish | source
 abbr zj zellij
+abbr agy "open -a Antigravity"
