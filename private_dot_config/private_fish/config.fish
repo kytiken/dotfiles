@@ -4,3 +4,4 @@ end
 ~/.local/bin/mise activate fish | source
 set -x EDITOR /opt/homebrew/bin/hx
 starship init fish | source
+abbr zj zellij
