@@ -12,5 +12,6 @@ fish_add_path --path $HOME/.antigravity/antigravity/bin
 set -x EDITOR /opt/homebrew/bin/hx
 
 # setup tools
+eval "$(/opt/homebrew/bin/brew shellenv)"
 ~/.local/bin/mise activate fish | source
 starship init fish | source
