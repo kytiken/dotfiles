@@ -8,6 +8,8 @@ abbr cz chezmoi
 # setting path
 fish_add_path --path $HOME/.antigravity/antigravity/bin
 fish_add_path /opt/homebrew/opt/rustup/bin
+fish_add_path /opt/homebrew/opt/mysql-client@8.0/bin
+fish_add_path /opt/homebrew/opt/curl/bin
 
 # set environment variables
 set -x EDITOR /opt/homebrew/bin/hx
