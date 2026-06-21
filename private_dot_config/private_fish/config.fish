@@ -7,6 +7,7 @@ abbr cz chezmoi
 
 # setting path
 fish_add_path --path $HOME/.antigravity/antigravity/bin
+fish_add_path /opt/homebrew/opt/rustup/bin
 
 # set environment variables
 set -x EDITOR /opt/homebrew/bin/hx
