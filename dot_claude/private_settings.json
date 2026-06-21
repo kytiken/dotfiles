@@ -1,0 +1,80 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(date *)",
+      "mcp__claude_ai_Slack__slack_read_channel",
+      "mcp__claude_ai_Slack__slack_update_canvas",
+      "Bash(rtk git *)",
+      "Bash(rtk wc *)",
+      "Bash(rtk glab *)",
+      "Bash(rtk ls *)",
+      "Bash(rtk grep *)",
+      "Bash(rtk find *)",
+      "Bash(yarn type:check)",
+      "Read(/Users/yamaguchi.kenta/**)",
+      "Read(/usr/local/**)",
+      "Bash(rtk docker ps*)",
+      "Bash(rtk docker logs*)",
+      "Bash(rtk docker images*)",
+      "Bash(rtk docker compose ps*)",
+      "Bash(rtk docker compose logs*)",
+      "Bash(rtk git checkout *)",
+      "Skill(glab:*)",
+      "Bash(rtk gh *)",
+      "Bash(git checkout *)",
+      "Bash(rtk read *)",
+      "Bash(rtk docker *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(rtk tree *)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  },
+  "disabledMcpjsonServers": [],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx -y ccstatusline --hook"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx -y ccstatusline --hook"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "npx -y ccstatusline",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "aws-core@claude-plugins-official": false,
+    "claude-code-setup@claude-plugins-official": true
+  },
+  "model": "opus[1m]"
+}
