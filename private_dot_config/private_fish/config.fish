@@ -5,12 +5,6 @@ end
 abbr zj zellij
 abbr cz chezmoi
 
-# setting path
-fish_add_path --path $HOME/.antigravity/antigravity/bin
-fish_add_path /opt/homebrew/opt/rustup/bin
-fish_add_path /opt/homebrew/opt/mysql-client@8.0/bin
-fish_add_path /opt/homebrew/opt/curl/bin
-
 # set environment variables
 set -x EDITOR /opt/homebrew/bin/hx
 
@@ -21,6 +15,11 @@ starship init fish | source
 zoxide init fish | source
 atuin init fish --disable-up-arrow | source
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-set --export --prepend PATH "~/.rd/bin"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+# setting path
+fish_add_path --path $HOME/.antigravity/antigravity/bin
+fish_add_path --global --move --path /opt/homebrew/opt/rustup/bin
+fish_add_path --global --move --path /opt/homebrew/opt/mysql-client@8.0/bin
+fish_add_path --global --move --path /opt/homebrew/opt/curl/bin
+fish_add_path --global --move --path /opt/homebrew/opt/uutils-coreutils/libexec/uubin
+fish_add_path --global --move --path /opt/homebrew/opt/gnu-sed/libexec/gnubin
+fish_add_path --global --move --path ~/.rd/bin
